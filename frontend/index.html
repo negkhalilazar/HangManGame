@@ -1,0 +1,27 @@
+<!--EECS1012 Term Project
+Negar Khalilazar, student ID#221037437
+index.html: html frontend-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title> Guess the Word </title>
+  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="client_side.js"></script>
+</head>
+<body onload="resetGame()">
+  <div id = "main">
+    <h1>Word<br>
+      Guess a letter in the word below!</h1>
+    <p id="guessarea"></p>
+    <form name="hangman">
+      <input name="guess" type="text" size="5" maxlength="1">
+      <input name="ratebutton" type="button" value="Guess" onClick="makeGuess()">
+      <p id="mistakes"></p>
+      <input name="refresh" type="button" value="New Game" onClick="resetGame()">
+      <input name="hint" type="button" value="Want help?" onClick="requestHint()">
+    </form>
+  </div>
+</body>
+</html>
